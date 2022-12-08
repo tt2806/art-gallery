@@ -1,6 +1,11 @@
-<body style="background-color: dodgerblue;">
-    <h1 style="text-align: center;">Login</h1>
-    <form action="/login" method="POST" style="margin: 0 auto; width: 300px;">
+<body style="background-color: dodgerblue; text-align: center;">
+    <h1 style="text-align: center;">Login</h1>  
+    <p style="text-align: center; margin: 0 auto;">If you were redirected here from the Register page, you have successfully made an account. Use this to login to it.</p>
+    <p style="text-align: center; margin: 0 auto;">YOU MUST CREATE AN ACCOUNT TO GO TO THE WEBSITE!</p>
+    <% if (messages.error) { %>
+        <%= messages.error %>
+    <% } %> 
+    <form action="/login" method="POST" style="margin: 0 auto; margin-top: 15px; width: 300px;">
         <div style="margin-bottom: 20px">
             <label for="email">E-Mail</label>
             <input type="email" id="email" name="email" required>
